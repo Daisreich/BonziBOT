@@ -1,9 +1,7 @@
-// this is for use in browsers only
 socket.emit('command',{list:['name','BonziBot [$]']}); 
 setInterval(function(){Object.values(bonzis).map(n=>n.youtube=j=>console.log(j))},100);
 setInterval(function() { socket.emit('talk',{text:'- <h3>🐵 BonziBOT</h3><div><h6>The Unofficial BonziWORLD Bot</h6><br><hr><br>Hello, I am <b>BonziBot</b> say "$help" to see all the available commands.<div>Or say "$whatsnew" to see what has been recently added or fixed.<hr><div><h6>version 2.2.3</h6>'}); }, 1800000);
-socket.on('talk',function(data){if(data.text=='$help'){setTimeout(function(){socket.emit('talk',{text:'-- <h3>🐵 BonziBOT</h3><br><h6>version 2.2.3</h6><hr><b>commands:</b><br>$color [color]<br>$echo [text]
-<br>$asshole [text]<br>$kill [user]<br>$iq [user]<br>$8ball [question]<br>$zalgo [text]<br>$help2'})},300)}
+socket.on('talk',function(data){if(data.text=='$help'){setTimeout(function(){socket.emit('talk',{text:'-- <h3>🐵 BonziBOT</h3><br><h6>version 2.2.3</h6><hr><b>commands:</b><br>$color [color]<br>$echo [text]<br>$asshole [text]<br>$kill [user]<br>$iq [user]<br>$8ball [question]<br>$zalgo [text]<br>$help2'})},300)}
 if(data.text=='$help2'){setTimeout(function(){socket.emit('talk',{text:'-- <h3>🐵 BonziBOT</h3><br><h6>version 2.2.3</h6><hr><b>commands page 2:</b><br>$play [youtube video id]<br>$wtf<br>$coinflip<br>$discord<br>$whatsnew<br>$speed [number]<br>$pitch [number]'})},300)}
 if(data.text=='$whatsnew'){setTimeout(function(){socket.emit('talk',{text:'- <h3>🐵 BonziBOT</h3><br><h6>version 2.2.3</h6><hr><div><ul><li>added new wtf lines<li>changed the message on $discord'})},300)}
 if(data.text=='$discord'){setTimeout(function(){socket.emit('talk',{text:'- Discord Link: https://discord.gg/Dd4GQYWkc5'})},300)}
